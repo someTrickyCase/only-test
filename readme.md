@@ -3,7 +3,7 @@
 Привет!
 Это мое решение [тестового задания](https://docs.google.com/document/d/1Qy4MN7duYzm-Wr-rQ4TFApvUoxfuqGXdcyA8-vt5Dhg/edit?tab=t.0).
 
-Для удобства я уже задеплоил проект [сюда](https://your-deployment-link-here).
+Для удобства я уже задеплоил проект [сюда](https://only-test-task-solution.netlify.app/).
 
 ## Используемый стек
 
