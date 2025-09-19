@@ -1,0 +1,38 @@
+@use '../../src/variables' as vars;
+@use '../../src/mixins' as *;
+
+.dates {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    @include pt-bold();
+    font-size: 140px;
+    letter-spacing: -2%;
+
+    display: flex;
+    gap: 120px;
+    
+    user-select: none;
+    pointer-events: none;
+
+    @media (max-width: 1120px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+
+        width: 100vw;
+        top: 35%;
+        left: 50%;
+        font-size: 48px;
+    }
+}
+
+.start-date {
+    color: vars.$iris;
+}
+.end-date {
+    color: vars.$fuchia
+}

@@ -1,0 +1,69 @@
+@use '../../src/variables' as vars;
+@use '../../src/mixins' as *;
+
+.switcher {
+    position: absolute;
+    left: 80px;
+    top: 70vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media (max-width: 1120px) {
+        top: 85vh;
+        left: 20px;
+    }
+}
+
+.indicator {
+    @include pt-regular();
+    font-size: 18px;
+    color: vars.$dark-blue;
+}
+
+.switcher-buttons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (max-width: 1120px) {
+        gap: 10px;
+        z-index: 2;
+    }
+}
+
+.switcher-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid vars.$dark-blue-10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+
+    svg {
+        stroke: vars.$dark-blue-50;
+        stroke-width: 1px;
+        transition: inherit;
+    }
+
+    @media (max-width: 1120px) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.switcher-button:hover{
+    border: 1px solid vars.$dark-blue-50;
+
+    svg {
+        stroke: vars.$dark-blue;
+        stroke-width: 2px;
+    }
+}

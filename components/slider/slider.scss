@@ -1,0 +1,89 @@
+@use '../../src/variables' as vars;
+@use '../../src/mixins' as *;
+
+.swiper {
+    @include animate-appearance();
+    padding: 0 80px !important;
+    position: absolute;
+    top: 85vh;
+    left: 0;
+    height: fit-content;
+
+    @media (max-width: 1120px){
+        top: 50vh;
+        height: 49vh;
+        padding: 20px 20px !important;
+        border-top: 1px solid vars.$dark-blue-50;
+
+        .swiper-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+    }
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    max-width: 350px !important;
+    max-height: 135px;
+    height: 120px !important;
+
+    cursor: grab;
+
+    h3 {
+        @include bebas();
+        color: vars.$blue;
+        font-size: 25px;
+
+        @media (max-width: 1120px){
+            font-size: 16px;
+        }
+    }
+
+    p {
+        @include pt-regular();
+        @include text-ellipsis();
+        margin-top: 20px;
+        color: vars.$dark-blue;
+
+        @media (max-width: 1120px){
+            font-size: 14px;
+        }
+    }
+}
+
+@mixin nav-button {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: vars.$white;
+    color: vars.$blue;
+    box-shadow: 0px 0px 5px 4px vars.$blue-30;
+
+    cursor: pointer;
+}
+
+.swiper-button-next {
+    @include nav-button();
+    right: 10px;
+}
+
+.swiper-button-prev {
+    @include nav-button();
+    transform: rotate(180deg);
+    left: 10px;
+}

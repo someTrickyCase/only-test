@@ -1,0 +1,18 @@
+/* RESETS */
+*,
+*::after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    background-color: #e5e5e5;
+
+    overflow: hidden;
+}
